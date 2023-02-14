@@ -16,8 +16,8 @@ def get_candy():
     else:
         return make_response(jsonify(result), 500)
 
-@app.post('/api/items')
-def add_item():
+@app.post('/api/candy')
+def add_candy():
     keys = ["title", "body"]
     post = request.json.get('title')
     body = request.json.get('body')
@@ -32,8 +32,8 @@ def add_item():
     else:
         return make_response(jsonify(result), 500)
 
-@app.patch('/api/items')
-def edit_item():
+@app.patch('/api/candy')
+def edit_candy():
     keys = ["title", "body"]
     post = request.json.get('title')
     body = request.json.get('body')
@@ -48,8 +48,8 @@ def edit_item():
     else:
         return make_response(jsonify(result), 500)
 
-@app.delete('/api/items')
-def delete_item():
+@app.delete('/api/candy')
+def delete_candy():
     keys = ["title", "body"]
     post = request.json.get('title')
     if post == None:
